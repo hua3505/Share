@@ -1,5 +1,6 @@
 package com.example.wolf.myanimationdemo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.anim1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                Intent intent = new Intent(MainActivity.this, Demo1Activity.class);
             }
         });
     }
