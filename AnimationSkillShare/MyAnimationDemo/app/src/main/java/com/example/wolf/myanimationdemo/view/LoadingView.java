@@ -1,4 +1,4 @@
-package com.magicwatchface.platform.ui.view;
+package com.example.wolf.myanimationdemo.view;
 
 import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
@@ -15,7 +15,7 @@ import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 
-import com.magicwatchface.platform.R;
+import com.example.wolf.myanimationdemo.R;
 
 public class LoadingView extends ImageView {
 
