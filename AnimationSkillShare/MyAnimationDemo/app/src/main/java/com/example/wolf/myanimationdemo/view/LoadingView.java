@@ -1,5 +1,7 @@
 package com.example.wolf.myanimationdemo.view;
 
+import android.animation.TimeAnimator;
+import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
 import android.content.Context;
