@@ -15,10 +15,34 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void init() {
-        findViewById(R.id.anim1).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.demo1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Demo1Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.demo2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Demo2Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.demo3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Demo3Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.demo4).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Demo4Activity.class);
                 startActivity(intent);
             }
         });
