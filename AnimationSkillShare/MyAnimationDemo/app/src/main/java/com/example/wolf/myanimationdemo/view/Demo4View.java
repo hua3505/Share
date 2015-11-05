@@ -61,9 +61,9 @@ public class Demo4View extends View {
         mAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
-                float y = (float) mAnimator.getAnimatedValue();
-                mBall.moveTo(mWidth / 2f, mHeight * y);
-                Log.i("Demo4View", "" + mWidth / 2 + ", " + mHeight * y);
+                float y = ((float) mAnimator.getAnimatedValue()) * (mHeight - 2 * BALL_RADIUS) + BALL_RADIUS;
+                mBall.moveTo(mWidth / 2f, y);
+                Log.i("Demo4View", "" + mWidth / 2 + ", " + y);
                 invalidate();
             }
         });
