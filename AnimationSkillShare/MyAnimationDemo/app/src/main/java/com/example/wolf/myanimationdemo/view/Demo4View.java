@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 
+import com.example.wolf.myanimationdemo.Ball;
+
 /**
  * Created by wolf on 15/11/2.
  */

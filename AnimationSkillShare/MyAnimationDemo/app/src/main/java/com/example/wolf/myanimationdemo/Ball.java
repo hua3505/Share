@@ -1,4 +1,4 @@
-package com.example.wolf.myanimationdemo.view;
+package com.example.wolf.myanimationdemo;
 
 import android.graphics.Canvas;
 import android.graphics.Paint;
