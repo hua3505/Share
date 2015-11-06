@@ -11,30 +11,36 @@
         android:id="@+id/demo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="demo1"/>
+        android:text="ValueAnimator"/>
 
     <Button
         android:id="@+id/demo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="demo2"/>
+        android:text="自定义TimePolator"/>
 
     <Button
         android:id="@+id/demo3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="demo3"/>
+        android:text="自定义TypeEvaluator"/>
 
     <Button
         android:id="@+id/demo4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="demo4"/>
+        android:text="endAndcancel"/>
 
     <Button
         android:id="@+id/demo5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="demo5"/>
+        android:text="ObjectAnimator"/>
+
+    <Button
+        android:id="@+id/demo6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TimeAniamtor"/>
 
 </LinearLayout>

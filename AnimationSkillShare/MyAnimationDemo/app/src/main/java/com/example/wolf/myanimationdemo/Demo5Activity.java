@@ -32,9 +32,15 @@ public class Demo5Activity extends Activity {
             return;
         }
 
-        mObjectAnimator = ObjectAnimator.ofInt(mView, "Height", 0, 1920);
+        mObjectAnimator = ObjectAnimator.ofInt(mView, "height", 0, 1920);
         mObjectAnimator.setDuration(1000);
         mObjectAnimator.setRepeatCount(ValueAnimator.INFINITE);
         mObjectAnimator.start();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mObjectAnimator.end();
     }
 }
