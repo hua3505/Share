@@ -11,17 +11,17 @@ public class Ball {
     private float mCy = 0;
     private float mRaius = 0;
 
-    Ball(float radius) {
+    public Ball(float radius) {
         mRaius = radius;
         mCx = mRaius * 2;
         mCy = mRaius * 2;
     }
 
-    void draw(Canvas canvas, Paint paint) {
+    public void draw(Canvas canvas, Paint paint) {
         canvas.drawCircle(mCx, mCy, mRaius, paint);
     }
 
-    void moveTo(float cx, float cy) {
+    public void moveTo(float cx, float cy) {
         mCx = cx;
         mCy = cy;
     }

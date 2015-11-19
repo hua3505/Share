@@ -9,8 +9,9 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
-import com.magicwatchface.ticker.R;
-import com.magicwatchface.ticker.graphics.WatchFaceDrawer;
+import com.example.wolf.myanimationdemo.R;
+import com.example.wolf.myanimationdemo.WatchFaceDrawer;
+
 
 /**
  * 4.4w.2表盘方式
@@ -61,24 +62,12 @@ public class WatchFaceView extends View {
         mWatchFaceDrawer.setInAmbientMode(flag);
     }
 
-    public void setStepCount(int stepCount) {
-        mWatchFaceDrawer.setStepCount(stepCount);
-    }
-
-    public void setStepGoal(int stepGoal) {
-        mWatchFaceDrawer.setStepGoal(stepGoal);
-    }
-
     public void setWeatherTemp(int weatherTemp) {
         mWatchFaceDrawer.setWeatherTemp(weatherTemp);
     }
 
     public void setWeatherIcon(String weatherIcon) {
         mWatchFaceDrawer.setWeatherIcon(weatherIcon);
-    }
-
-    public void setWeatherTempScaleC(boolean flag) {
-        mWatchFaceDrawer.setWeatherTempScaleC(flag);
     }
 
 }

@@ -22,7 +22,7 @@ import com.example.wolf.myanimationdemo.R;
 
 public class LoadingView extends ImageView {
 
-    private static final int ANIMATION_DURATION = 1000;
+    private static final int ANIMATION_DURATION = 100000;
 
     private boolean mHasInited;
     private Bitmap mLoadingBitmap;

@@ -43,4 +43,16 @@
         android:layout_height="wrap_content"
         android:text="TimeAniamtor"/>
 
+    <Button
+        android:id="@+id/demo7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dripping"/>
+
+    <Button
+        android:id="@+id/demo8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="demo8"/>
+
 </LinearLayout>

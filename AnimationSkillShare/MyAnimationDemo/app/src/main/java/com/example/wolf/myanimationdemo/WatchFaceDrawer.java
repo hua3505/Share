@@ -1,5 +1,6 @@
 package com.example.wolf.myanimationdemo;
 
+import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ValueAnimator;
 import android.content.Context;
@@ -172,7 +173,6 @@ public class WatchFaceDrawer {
     /**
      * 表盘设计图的px转换为设备的px
      * 表盘设计图是320px, 元素的位置坐标也是按照320px图标识的，转换为实际在设备上的px
-     * @param designPxValue
      * @return
      */
     private int t(int designPx) {
@@ -507,6 +507,7 @@ public class WatchFaceDrawer {
     	dropAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {	
 			@Override
 			public void onAnimationUpdate(ValueAnimator animation) {
+
 				mDripHeight = (Float) animation.getAnimatedValue();
 			}
 		});
@@ -582,16 +583,25 @@ public class WatchFaceDrawer {
     	sprayScaleAnimator.setInterpolator(new DecelerateInterpolator());
     	sprayScaleAnimator.setDuration(SPRAY_TOTAL_DURATION);
     	sprayScaleAnimator.setRepeatCount(0);
-    	sprayScaleAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {	
-			@Override
-			public void onAnimationUpdate(ValueAnimator animation) {
-				mSprayScaleRate = (Float) animation.getAnimatedValue();
-			}
-		});	
+    	sprayScaleAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                mSprayScaleRate = (Float) animation.getAnimatedValue();
+            }
+        });
     	
-    	mAnimatorSet.play(dropAnimator).with(fadeInAnimator).before(dropInWaterAnimator);
-    	mAnimatorSet.play(dropInWaterAnimator).with(fadeOutAnimator).with(sprayFadeInAnimator).with(sprayScaleAnimator);
-    	mAnimatorSet.play(sprayFadeInAnimator).before(sprayStayAnimator).before(sprayFadeOutAnimator);
+//    	mAnimatorSet.play(dropAnimator).with(fadeInAnimator).before(dropInWaterAnimator);
+//    	mAnimatorSet.play(dropInWaterAnimator).with(fadeOutAnimator).with(sprayFadeInAnimator).with(sprayScaleAnimator);
+//    	mAnimatorSet.play(sprayFadeInAnimator).before(sprayStayAnimator).before(sprayFadeOutAnimator);
+
+        AnimatorSet animatorSet1 = new AnimatorSet();
+        AnimatorSet animatorSet2 = new AnimatorSet();
+        AnimatorSet animatorSet3 = new AnimatorSet();
+
+        animatorSet1.play(dropAnimator).with(fadeInAnimator).before(dropInWaterAnimator);
+        animatorSet2.play(fadeOutAnimator).with(sprayFadeInAnimator).with(sprayScaleAnimator);
+        animatorSet3.play(sprayStayAnimator).before(sprayFadeOutAnimator);
+        mAnimatorSet.play(animatorSet1).before(animatorSet2).before(animatorSet3);
 
     	mAnimatorSet.start();
     }

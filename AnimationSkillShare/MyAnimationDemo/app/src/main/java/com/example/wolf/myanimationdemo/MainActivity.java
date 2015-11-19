@@ -62,5 +62,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        findViewById(R.id.demo7).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Demo7Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.demo8).setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Demo8Activity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
